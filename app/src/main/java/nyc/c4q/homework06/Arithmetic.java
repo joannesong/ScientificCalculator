@@ -6,7 +6,7 @@ package nyc.c4q.homework06;
 
 public class Arithmetic {
     public void calculate(String str){
-        Numbers numbers = new Numbers();
+        /*Numbers numbers = new Numbers();
         switch(str){
             case "divide":
                 numbers.numList(numArr.size);
@@ -14,9 +14,9 @@ public class Arithmetic {
             case "add":;
             case "modulo";
             case "clear":
-            case "subtract";
+            case "subtract";*/
 
 
         }
     }
-}
+
