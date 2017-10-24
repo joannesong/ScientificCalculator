@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button oneButton;
+    /*Button oneButton;
     Button twoButton;
     Button threeButton;
     Button fourButton;
@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
     Button answer;
 
 
-    Numbers numbers = new Numbers();
+    Numbers numbers = new Numbers();*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        oneButton = (Button) findViewById(R.id.line4box1);
+        /*oneButton = (Button) findViewById(R.id.line4box1);
         twoButton = (Button) findViewById(R.id.line4box2);
         threeButton = (Button) findViewById(R.id.line4box3);
         fourButton = (Button) findViewById(R.id.line3box1);
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
             }
-        });
+        });*/
 
     }
 }
