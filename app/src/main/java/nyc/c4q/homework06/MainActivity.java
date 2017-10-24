@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         /*oneButton = (Button) findViewById(R.id.line4box1);
         twoButton = (Button) findViewById(R.id.line4box2);
         threeButton = (Button) findViewById(R.id.line4box3);
@@ -163,6 +164,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });*/
+
+    }
+
+    public void calculateEquation(View v){
+
 
     }
 }

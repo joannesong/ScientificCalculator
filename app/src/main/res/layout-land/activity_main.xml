@@ -8,9 +8,15 @@
     android:orientation="vertical"
     tools:context="nyc.c4q.homework06.MainActivity">
     <TextView
+        android:id="@+id/text_equation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:hint="0"
+        android:textSize="30sp"
+        android:textAlignment="viewEnd"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -23,7 +29,7 @@
             android:id="@+id/rad_degree_togle"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_weight="1.7"
+            android:layout_weight="1.67"
             android:showText="true"
             android:textOn="Deg"
             android:textOff="Rad"
@@ -40,6 +46,7 @@
             android:layout_weight="2"
             android:text="x!"
             android:textSize="30sp"
+
 
             />
 

@@ -8,9 +8,16 @@
     android:orientation="vertical"
     tools:context="nyc.c4q.homework06.MainActivity">
     <TextView
+        android:id="@+id/text_equation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:hint="0"
+        android:textSize="40sp"
+        android:paddingEnd="10dp"
+        android:gravity="end"
+        android:paddingTop="30dp"
+        />
     <LinearLayout>
 
         <Button
