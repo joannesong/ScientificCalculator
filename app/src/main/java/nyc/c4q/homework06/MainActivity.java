@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     /*Button oneButton;
@@ -27,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     Numbers numbers = new Numbers();*/
+    TextView equation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        equation = (TextView) findViewById(R.id.text_equation);
 
 
         /*oneButton = (Button) findViewById(R.id.line4box1);
@@ -168,6 +172,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateEquation(View v){
+         //int iD =v.getId();
+
+
+                CalculatorEvaluation calc = new CalculatorEvaluation();
+                String thisEquation = equation.getText().toString();
+                if (v.getTag().toString().equals("=")){
+                    calc.setEquation(equation.getText().toString());
+                }else if (v.getTag().toString().equals("delete")){
+                    equation.setText(thisEquation.substring(0, thisEquation.length()-1));
+
+                }else if (v.getTag().toString().equals("inv")){
+                    //switch the buttons
+                } else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
+                    thisEquation= thisEquation.concat(v.getTag().toString());
+                    equation.setText(thisEquation);
+                }
+
+
 
 
     }
