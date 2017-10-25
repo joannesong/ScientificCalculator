@@ -8,9 +8,16 @@
     android:orientation="vertical"
     tools:context="nyc.c4q.homework06.MainActivity">
     <TextView
+        android:id="@+id/text_equation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:hint="0"
+        android:textSize="40sp"
+        android:paddingEnd="10dp"
+        android:gravity="end"
+        android:paddingTop="30dp"
+        />
     <LinearLayout>
 
         <Button
@@ -20,17 +27,17 @@
             android:layout_weight="1"
             android:text="("
             android:textSize="30dp"
-
+            android:onClick="calculateEquation"
             />
 
         <Button
-
             android:id="@+id/closed_parens"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text=")"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
 
@@ -41,6 +48,7 @@
             android:layout_weight="1"
             android:text="%"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/clear"
@@ -49,6 +57,7 @@
             android:layout_weight="1"
             android:text="AC"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
     </LinearLayout>
@@ -60,6 +69,7 @@
             android:layout_weight="1"
             android:text="7"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
@@ -70,6 +80,7 @@
             android:layout_weight="1"
             android:text="8"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
@@ -79,6 +90,7 @@
             android:layout_weight="1"
             android:text="9"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/divide"
@@ -87,6 +99,7 @@
             android:layout_weight="1"
             android:text="/"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
     </LinearLayout>
@@ -101,13 +114,13 @@
             />
 
         <Button
-
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="5"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
@@ -117,6 +130,7 @@
             android:layout_weight="1"
             android:text="6"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/multiply"
@@ -125,6 +139,7 @@
             android:layout_weight="1"
             android:text="x"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
     </LinearLayout>
@@ -136,6 +151,7 @@
             android:layout_weight="1"
             android:text="1"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
@@ -145,7 +161,8 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="2"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:onClick="calculateEquation"/>
 
         <Button
 
@@ -155,6 +172,7 @@
             android:layout_weight="1"
             android:text="3"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/subtract"
@@ -163,6 +181,7 @@
             android:layout_weight="1"
             android:text="+"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
     </LinearLayout>
@@ -174,16 +193,17 @@
             android:layout_weight="1"
             android:text="0"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
-
             android:id="@+id/decimal"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="."
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
         <Button
@@ -193,6 +213,7 @@
             android:layout_weight="1"
             android:text="="
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/add"
@@ -201,6 +222,7 @@
             android:layout_weight="1"
             android:text="+"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             />
 
     </LinearLayout>
