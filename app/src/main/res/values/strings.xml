@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Homework06</string>
+    <string name="button_rad">Rad</string>
+    <string name="button_deg">Deg</string>
+    <string name="button_factorial">x!</string>
+    <string name="button_open_parens">(</string>
+    <string name="button_closed_parens">(</string>
+
+
 </resources>
