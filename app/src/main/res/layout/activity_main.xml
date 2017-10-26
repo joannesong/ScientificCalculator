@@ -115,6 +115,7 @@
             android:layout_weight="1"
             android:text="4"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             android:tag="4"
             />
 

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    app:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context="nyc.c4q.homework06.MainActivity">
     <TextView
         android:id="@+id/text_equation"
@@ -26,34 +27,42 @@
         android:gravity="center"
         android:paddingBottom="5dp"
         >
-        <ToggleButton
-            android:id="@+id/rad_degree_togle"
-            android:layout_width="match_parent"
+
+        <Button
+            android:id="@+id/rad"
+            android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_weight="1.67"
-            android:showText="true"
-            android:textOn="Deg"
-            android:textOff="Rad"
+            android:layout_weight="1"
+            android:text="@string/button_rad"
             android:textSize="30sp"
-            android:disabledAlpha="1.2"
             />
+
+        <Button
+            android:id="@+id/degree"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:text="@string/button_deg"
+            android:textSize="30sp"
+            />
+
 
 
         <Button
             android:id="@+id/factorial"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:text="x!"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="!"/>
+            android:tag="!("/>
 
         <Button
             android:id="@+id/open_parens"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:text="("
             android:textSize="30dp"
             android:onClick="calculateEquation"
@@ -62,20 +71,21 @@
 
         <Button
             android:id="@+id/closed_parens"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:text=")"
             android:textSize="30dp"
+            android:onClick="calculateEquation"
             android:tag=")"
             />
 
 
         <Button
             android:id="@+id/percent"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:text="%"
             android:textSize="30dp"
             android:onClick="calculateEquation"
@@ -83,9 +93,9 @@
             />
         <Button
             android:id="@+id/clear"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:text="CE"
             android:textSize="30dp"
             android:onClick="calculateEquation"
@@ -121,7 +131,7 @@
             android:text="sin"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="sin"
+            android:tag="sin("
             />
         <Button
             android:id="@+id/natural_log"
@@ -201,7 +211,7 @@
             android:text="cos"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="cos"
+            android:tag="cos("
             />
         <Button
             android:id="@+id/log"
@@ -211,7 +221,7 @@
             android:text="log"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="log"
+            android:tag="log("
             />
         <Button
             android:id="@+id/four"
@@ -242,6 +252,7 @@
             android:text="6"
             android:textSize="30dp"
             android:tag="6"
+            android:onClick="calculateEquation"
             />
         <Button
             android:id="@+id/multiply"
@@ -279,7 +290,7 @@
             android:text="tan"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="tan"
+            android:tag="tan("
             />
         <Button
             android:id="@+id/root"
@@ -289,7 +300,7 @@
             android:text="\u221A"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="\u221A"
+            android:tag="\u221A("
             />
         <Button
             android:id="@+id/one"
@@ -329,7 +340,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:text="+"
+            android:text="-"
             android:textSize="30dp"
             android:onClick="calculateEquation"
             android:tag="-"
