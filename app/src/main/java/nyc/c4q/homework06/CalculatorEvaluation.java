@@ -15,7 +15,9 @@ public class CalculatorEvaluation {
     Double result;
     public void evaluateEquation(String s, TextView textView){
 
-        //currently % is for modulo, not percentage, need to catch %, run percent function, then replace.
+        //TODO: currently % is for modulo, not percentage, need to catch %, run percent function, then replace.
+        //TODO: need to check functions format for some functions
+
        try {
            result = evaluator.evaluate(s);
            textView.setText(String.valueOf(result));
