@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="nyc.c4q.homework06.MainActivity">
+    tools:context="nyc.c4q.homework06.MainActivity"
+    android:textAllCaps="false">
     <TextView
         android:id="@+id/text_equation"
         android:layout_width="match_parent"
@@ -55,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:text="CE"
+            android:text="AC"
             android:textSize="30dp"
             android:onClick="calculateEquation"
             android:tag="delete"/>
@@ -100,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:text="/"
+            android:text="\u00F7"
             android:textSize="30dp"
             android:onClick="calculateEquation"
             android:tag="/"
@@ -145,10 +146,10 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:text="x"
+            android:text="\u00D7"
             android:textSize="30dp"
             android:onClick="calculateEquation"
-            android:tag="x"
+            android:tag="*"
             />
 
     </LinearLayout>
@@ -236,7 +237,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:text="+"
+            android:text="\u002B"
             android:textSize="30dp"
             android:onClick="calculateEquation"
             android:tag="+"
