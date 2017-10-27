@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends AppCompatActivity {
     /*Button oneButton;
     Button twoButton;
@@ -172,15 +174,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateEquation(View v){
-         //int iD =v.getId();
-
 
                 CalculatorEvaluation calc = new CalculatorEvaluation();
                 String thisEquation = equation.getText().toString();
+                String expression;
+
                 if (v.getTag().toString().equals("=")){
                     calc.setEquation(equation.getText().toString());
+                    expression = calc.getEquation();
+                    calc.evaluateEquation(expression, equation);
                 }else if (v.getTag().toString().equals("delete")){
-                    equation.setText(thisEquation.substring(0, thisEquation.length()-1));
+                    if (thisEquation.length() != 0){
+                            equation.setText(thisEquation.substring(0, thisEquation.length() - 1));
+                    }
 
                 }else if (v.getTag().toString().equals("inv")){
                     //switch the buttons
@@ -188,10 +194,6 @@ public class MainActivity extends AppCompatActivity {
                     thisEquation= thisEquation.concat(v.getTag().toString());
                     equation.setText(thisEquation);
                 }
-
-
-
-
     }
 }
 
