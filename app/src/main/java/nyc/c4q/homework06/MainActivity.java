@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+import java.lang.Math;
 
 
 public class MainActivity extends AppCompatActivity {
