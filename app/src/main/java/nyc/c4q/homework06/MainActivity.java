@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
             text_equation.setText(thisEquation);
         }
 
+
 //        if (v.getTag().toString().equals("=")) {
 //            calc.setEquation(equation.getText().toString());
 //            expression = calc.getEquation();
