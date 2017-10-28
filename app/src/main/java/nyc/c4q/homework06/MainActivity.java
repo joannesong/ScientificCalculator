@@ -6,192 +6,188 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
+import java.lang.Math;
+
 
 public class MainActivity extends AppCompatActivity {
-    /*Button oneButton;
-    Button twoButton;
-    Button threeButton;
-    Button fourButton;
-    Button five;
-    Button six;
-    Button seven;
-    Button eight;
-    Button nine;
-    Button zero;
-    Button clear;
-    Button parens;
-    Button modulo;
-    Button divide;
-    Button multiply;
-    Button add;
-    Button subtract;
-    Button answer;
 
 
-    Numbers numbers = new Numbers();*/
-    TextView equation;
+    public int inv_counter = 1;
+
+    private TextView text_equation;
+    private Button rad_degree_togle;
+    private Button factorial;
+    private Button open_parens;
+    private Button closed_parens;
+    private Button percent;
+    private Button clear;
+    private Button inverse;
+    private Button sin;
+    private Button sin_inverse;
+    private Button ln;
+    private Button ln_inverse;
+    private Button seven;
+    private Button eight;
+    private Button nine;
+    private Button divide;
+    private Button pi;
+    private Button cos;
+    private Button cos_inverse;
+    private Button log;
+    private Button log_inverse;
+    private Button four;
+    private Button five;
+    private Button six;
+    private Button multiply;
+    private Button eulers_number;
+    private Button tangent;
+    private Button tangent_inverse;
+    private Button square;
+    private Button square_root;
+    private Button one;
+    private Button two;
+    private Button three;
+    private Button subtract;
+    private Button answer;
+    private Button random_number;
+    private Button exponent;
+    private Button x_square_y;
+    private Button x_root_y;
+    private Button zero;
+    private Button decimal;
+    private Button equals;
+    private Button add;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        equation = (TextView) findViewById(R.id.text_equation);
-
-
-        /*oneButton = (Button) findViewById(R.id.line4box1);
-        twoButton = (Button) findViewById(R.id.line4box2);
-        threeButton = (Button) findViewById(R.id.line4box3);
-        fourButton = (Button) findViewById(R.id.line3box1);
-        five = (Button) findViewById(R.id.line3box2);
-        six = (Button) findViewById(R.id.line3box3);
-        seven = (Button) findViewById(R.id.line2box1);
-        eight = (Button) findViewById(R.id.line2box2);
-        nine = (Button) findViewById(R.id.line2box3);
-        zero = (Button) findViewById(R.id.line5box2);
-        clear = (Button) findViewById(R.id.line1box1);
-        parens = (Button) findViewById(R.id.line1box2);
-        modulo = (Button) findViewById(R.id.line1box3);
-        divide = (Button) findViewById(R.id.line1box4);
-        multiply = (Button) findViewById(R.id.line2box4);
-        add = (Button) findViewById(R.id.line4box4);
-        subtract = (Button) findViewById(R.id.line3box4);
-        answer = (Button) findViewById(R.id.line5box4);
-
-        oneButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(1);
-            }
-        });
-        twoButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(2);
-            }
-        });
-        threeButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                numbers.numList(3);
-            }
-        });
-        fourButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(4);
-            }
-        });
-        five.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(5);
-            }
-        });
-        six.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(6);
-            }
-        });
-        seven.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                numbers.numList(7);
-            }
-        });
-        eight.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(8);
-            }
-        });
-        nine.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(9);
-            }
-        });
-        zero.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                numbers.numList(0);
-            }
-        });
-        clear.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        parens.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        modulo.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        divide.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        multiply.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        add.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        subtract.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        answer.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-            }
-        });*/
+        text_equation = (TextView) findViewById(R.id.text_equation);
+        rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
+        factorial = (Button) findViewById(R.id.factorial);
+        open_parens = (Button) findViewById(R.id.open_parens);
+        closed_parens = (Button) findViewById(R.id.closed_parens);
+        percent = (Button) findViewById(R.id.percent);
+        clear = (Button) findViewById(R.id.clear);
+        inverse = (Button) findViewById(R.id.inverse);
+        sin = (Button) findViewById(R.id.sin);
+        sin_inverse = (Button) findViewById(R.id.sin_inverse);
+        ln = (Button) findViewById(R.id.ln);
+        ln_inverse = (Button) findViewById(R.id.ln_inverse);
+        seven = (Button) findViewById(R.id.seven);
+        eight = (Button) findViewById(R.id.eight);
+        nine = (Button) findViewById(R.id.nine);
+        divide = (Button) findViewById(R.id.divide);
+        pi = (Button) findViewById(R.id.pi);
+        cos = (Button) findViewById(R.id.cos);
+        cos_inverse = (Button) findViewById(R.id.cos_inverse);
+        log = (Button) findViewById(R.id.log);
+        log_inverse = (Button) findViewById(R.id.log_inverse);
+        four = (Button) findViewById(R.id.four);
+        five = (Button) findViewById(R.id.five);
+        six = (Button) findViewById(R.id.six);
+        multiply = (Button) findViewById(R.id.multiply);
+        eulers_number = (Button) findViewById(R.id.eulers_number);
+        tangent = (Button) findViewById(R.id.tangent);
+        tangent_inverse = (Button) findViewById(R.id.tangent_inverse);
+        square_root = (Button) findViewById(R.id.square_root);
+        square = (Button) findViewById(R.id.square);
+        one = (Button) findViewById(R.id.one);
+        two = (Button) findViewById(R.id.two);
+        three = (Button) findViewById(R.id.three);
+        subtract = (Button) findViewById(R.id.subtract);
+        answer = (Button) findViewById(R.id.answer);
+        random_number = (Button) findViewById(R.id.random_number);
+        exponent = (Button) findViewById(R.id.exponent);
+        x_root_y = (Button) findViewById(R.id.x_root_y);
+        x_square_y = (Button) findViewById(R.id.x_square_y);
+        zero = (Button) findViewById(R.id.zero);
+        decimal = (Button) findViewById(R.id.decimal);
+        equals = (Button) findViewById(R.id.equals);
+        add = (Button) findViewById(R.id.add);
+        //TODO: saved instance state for switching screen orientation layouts.
 
     }
 
-    public void calculateEquation(View v){
-         //int iD =v.getId();
+    public void calculateEquation(View v) {
+
+        //TODO: create and use resource values for button tags and text
+        //TODO: create resource values for xml styles.
+        //TODO: design the UI styles
+        // TODO: radians vs degrees toggle button.
 
 
-                CalculatorEvaluation calc = new CalculatorEvaluation();
-                String thisEquation = equation.getText().toString();
-                if (v.getTag().toString().equals("=")){
-                    calc.setEquation(equation.getText().toString());
-                }else if (v.getTag().toString().equals("delete")){
-                    equation.setText(thisEquation.substring(0, thisEquation.length()-1));
+        CalculatorEvaluation calc = new CalculatorEvaluation();
+        String thisEquation = text_equation.getText().toString();
+        String expression;
+        if (v.getTag().toString().equals("inv")) {
+            inv_counter = inv_counter + 1;
+            if (inv_counter % 2 == 0) {
+                sin_inverse.setVisibility(View.VISIBLE);
+                sin.setVisibility(View.GONE);
+                ln_inverse.setVisibility(View.VISIBLE);
+                ln.setVisibility(View.GONE);
+                cos_inverse.setVisibility(View.VISIBLE);
+                cos.setVisibility(View.GONE);
+                log_inverse.setVisibility(View.VISIBLE);
+                log.setVisibility(View.GONE);
+                tangent_inverse.setVisibility(View.VISIBLE);
+                tangent.setVisibility(View.GONE);
+                square.setVisibility(View.VISIBLE);
+                square_root.setVisibility(View.GONE);
+                random_number.setVisibility(View.VISIBLE);
+                answer.setVisibility(View.GONE);
+                x_root_y.setVisibility(View.VISIBLE);
+                x_square_y.setVisibility(View.GONE);
 
-                }else if (v.getTag().toString().equals("inv")){
-                    //switch the buttons
-                } else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
-                    thisEquation= thisEquation.concat(v.getTag().toString());
-                    equation.setText(thisEquation);
-                }
+            } else if (inv_counter % 2 != 0) {
 
+                sin_inverse.setVisibility(View.GONE);
+                sin.setVisibility(View.VISIBLE);
+                ln_inverse.setVisibility(View.GONE);
+                ln.setVisibility(View.VISIBLE);
+                cos_inverse.setVisibility(View.GONE);
+                cos.setVisibility(View.VISIBLE);
+                log_inverse.setVisibility(View.GONE);
+                log.setVisibility(View.VISIBLE);
+                tangent_inverse.setVisibility(View.GONE);
+                tangent.setVisibility(View.VISIBLE);
+                square.setVisibility(View.GONE);
+                square_root.setVisibility(View.VISIBLE);
+                random_number.setVisibility(View.GONE);
+                answer.setVisibility(View.VISIBLE);
+                x_root_y.setVisibility(View.GONE);
+                x_square_y.setVisibility(View.VISIBLE);
 
+            }
+        }
+        if (v.getTag().toString().equals("=")) {
+            calc.setEquation(text_equation.getText().toString());
+            expression = calc.getEquation();
+           calc.evaluateEquation(expression, text_equation);
+        } else if (v.getTag().toString().equals("delete")) {
+            text_equation.setText(thisEquation.substring( thisEquation.length()));
 
+        } else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
+            thisEquation = thisEquation.concat(v.getTag().toString());
+            text_equation.setText(thisEquation);
+        }
 
+//        if (v.getTag().toString().equals("=")) {
+//            calc.setEquation(equation.getText().toString());
+//            expression = calc.getEquation();
+//            calc.evaluateEquation(expression, equation);
+//        } else if (v.getTag().toString().equals("delete")) {
+//            if (thisEquation.length() != 0) {
+//                equation.setText(thisEquation.substring(thisEquation.length()));
+//            }
+//            else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
+//                thisEquation = thisEquation.concat(v.getTag().toString());
+//                equation.setText(thisEquation);
+//            }
+//        }
     }
 }
 
