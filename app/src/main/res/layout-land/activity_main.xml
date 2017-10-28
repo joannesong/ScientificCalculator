@@ -274,7 +274,7 @@
             android:text="\u00D7"
             android:textSize="30dp"
             android:onClick="calculateEquation"
-            android:tag="x"/>
+            android:tag="*"/>
 
     </LinearLayout>
     <LinearLayout
@@ -388,7 +388,7 @@
             android:text="Exp"
             android:textSize="30sp"
             android:onClick="calculateEquation"
-            android:tag="EXP"
+            android:tag="^"
             android:textAllCaps="false"
             />
         <Button
