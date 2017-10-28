@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="calculator_background">#c7dcec</color>
+    <color name="calculator_foreground">#a3a4a4</color>
+    <color name="calculator_color">#d9dfe4</color>
+    <color name="calculator_screen">#d1e3e7</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="primary_text">#212121</color>
 </resources>
