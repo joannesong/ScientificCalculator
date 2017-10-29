@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private Button decimal;
     private Button equals;
     private Button add;
+    boolean evaluated= false;
 
 
     @Override
@@ -167,8 +168,12 @@ public class MainActivity extends AppCompatActivity {
             calc.setEquation(text_equation.getText().toString());
             expression = calc.getEquation();
            calc.evaluateEquation(expression, text_equation);
+            evaluated = true;
+        } else if (evaluated){
+            text_equation.setText(v.getTag().toString());
+            evaluated= false;
         } else if (v.getTag().toString().equals("delete")) {
-            text_equation.setText(thisEquation.substring( thisEquation.length()));
+            text_equation.setText(thisEquation.substring(thisEquation.length()));
 
         } else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
             thisEquation = thisEquation.concat(v.getTag().toString());
