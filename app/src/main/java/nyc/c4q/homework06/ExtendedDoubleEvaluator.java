@@ -44,6 +44,7 @@ public class ExtendedDoubleEvaluator extends DoubleEvaluator {
         // Test that all this stuff is ok
         String expression = "sqrt(abs(-2))^2";
         System.out.println (expression+" = "+new ExtendedDoubleEvaluator().evaluate(expression));
+        System.out.println();
     }
 
 }
